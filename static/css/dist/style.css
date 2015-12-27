@@ -1,0 +1,134 @@
+html {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+}
+
+@media screen and (min-width: 1280px) {
+
+  html {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  html {
+    font-size: 12px;
+  }
+}
+
+h1 {
+  font-size: 4em;
+}
+
+header {
+  height: 40vw;
+  max-height: 600px;
+  min-height: 280px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: fix;
+}
+
+.post {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.99% * 1/4 - 22.5px);
+  height: calc(99.99% * 1/4 - 22.5px);
+}
+
+.post:nth-child(n) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.post:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.post:nth-child(4n) {
+  margin-right: 0;
+}
+
+.post:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 52em) {
+  .post { -webkit-box-flex: 0; -webkit-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: calc(99.99% * 1/2 - 15px); height: calc(99.99% * 1/2 - 15px); }
+  .post:nth-child(n) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .post:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .post:nth-child(2n) {
+    margin-right: 0;
+  }
+  .post:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 25em) {
+  .post { -webkit-box-flex: 0; -webkit-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 99.99%; height: 99.99%; }
+  .post:nth-child(n) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .post:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .post:nth-child(1n) {
+    margin-right: 0;
+  }
+  .post:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+.album-thumbnail {
+  width: 100%;
+}
+
+.thumbnail-description {
+  margin-top: 10px;
+}
+
+.thumbnail-description div {
+  text-align: center;
+  margin: 4px 0;
+}

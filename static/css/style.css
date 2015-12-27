@@ -1,0 +1,56 @@
+@lost flexbox flex;
+
+@custom-media --small-viewport (max-width: 25em);
+@custom-media --medium-viewport (max-width: 52em);
+
+html {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+  font-size: responsive;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+header {
+  height: 40vw;
+  max-height: 600px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.posts {
+  lost-center: 1280px;
+  clear: fix;
+}
+
+.post {
+  lost-waffle: 1/4;
+}
+
+@media (--medium-viewport) {
+  .post { lost-waffle: 1/2; }
+}
+
+@media (--small-viewport) {
+  .post { lost-waffle: 1/1; }
+}
+
+.album-thumbnail {
+  width: 100%;
+}
+
+.thumbnail-description {
+  margin-top: 10px;
+}
+
+.thumbnail-description div {
+  text-align: center;
+  margin: 4px 0;
+}

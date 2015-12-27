@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cathode</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/dist/style.css">
+</head>
+<body>
+<header>
+  <div class="jumbotron">
+    <h1>Best of 2015</h1>
+    <p>This is a list of all of my favourite music to come out this year.</p>
+  </div>
+</header>
+
+<main class="posts">
+  {{ range .Data.Pages }}
+    <article class="post">
+      <img class="album-thumbnail" src="/images/{{ .Params.cover }}.jpg" alt="">
+      <div class="thumbnail-description">
+        <div>{{ .Title }}</div>
+        <div>{{ .Params.artist }}</div>
+      </div>
+    </article>
+  {{ end }}
+</main>
+{{ partial "footer.html" . }}

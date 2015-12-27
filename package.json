@@ -1,0 +1,17 @@
+{
+  "name": "cathode",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.2.2",
+    "cssnext": "^1.8.4",
+    "lost": "^6.6.2",
+    "postcss-cli": "^2.3.2",
+    "postcss-responsive-type": "^0.3.2"
+  }
+}

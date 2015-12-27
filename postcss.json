@@ -1,0 +1,12 @@
+{
+  "use": [
+    "autoprefixer",
+    "lost",
+    "cssnext",
+    "postcss-responsive-type"
+  ],
+  "input": "static/css/style.css",
+  "output": "static/css/dist/style.css",
+  "watch": true,
+  "local-plugins": true
+}

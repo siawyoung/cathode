@@ -110,7 +110,9 @@ $(document).ready(function() {
 
 function wrapParagraphTags() {
   $('.expansion').each(function() {
-    $(this).children('h4:contains("Favourite tracks"), h4:contains("Favorite tracks")').next().addClass("favourite-tracks")
+    var favTracksHeader = $(this).children('h4:contains("Favourite tracks"), h4:contains("Favorite tracks")')
+    favTracksHeader.css("margin-top", "30px")
+    favTracksHeader.next().addClass("favourite-tracks")
     $(this).children().not('.side-info').wrapAll('<div class="expansion-content" />')
   })
 }

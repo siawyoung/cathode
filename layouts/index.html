@@ -22,9 +22,13 @@
 </header>
 
 <main class="posts">
-  {{ range .Data.Pages }}
+  {{ range $index, $post := .Data.Pages }}
     <article class="post">
-      <img class="album-thumbnail"  src="/images/placeholder.png" data-src="/images/{{ .Params.cover }}.jpg">
+      {{ if lt 3 $index }}
+        <img class="album-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" data-src="/images/{{ .Params.cover }}.jpg" onload="lzld(this)">
+      {{ else }}
+        <img class="album-thumbnail" src="/images/{{ .Params.cover }}.jpg">
+      {{ end }}
       <div class="thumbnail-description">
         <div class="thumbnail-title">{{ .Title }}</div>
         <div class="thumbnail-artist">{{ .Params.artist }}</div>

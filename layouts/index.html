@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Cathode</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/dist/style.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery.unveil.js"></script>
+  <script src="/js/colibri.min.js"></script>
+  <script src="/js/app.js"></script>
 </head>
 <body>
 <header>
   <div class="jumbotron">
     <h1>Best of 2015</h1>
-    <p>This is a list of all of my favourite music to come out this year.</p>
+    <p>This is a list of all my favourite music to come out this year.</p>
   </div>
 </header>
 
 <main class="posts">
   {{ range .Data.Pages }}
     <article class="post">
-      <img class="album-thumbnail" src="/images/{{ .Params.cover }}.jpg" alt="">
+      <img class="album-thumbnail" src="/images/{{ .Params.cover }}.jpg">
       <div class="thumbnail-description">
-        <div>{{ .Title }}</div>
-        <div>{{ .Params.artist }}</div>
+        <div class="thumbnail-title">{{ .Title }}</div>
+        <div class="thumbnail-artist">{{ .Params.artist }}</div>
+      </div>
+      {{ if .Site.Data.colors }}
+        {{ $colorinfo := index .Site.Data.colors .Title }}
+        <div class="height-transition height-transition-hidden">
+          <div class="expansion" data-background-color="{{ $colorinfo.background }}" data-secondary-colors="{{ $colorinfo.content }}">
+        </div>
+      {{ else }}
+        <div class="expansion">
+      {{ end }}
+        <h2>{{ .Title }}</h2>
+        <h3>{{ .Params.artist }}</h3>
+        {{ .Content }}
+      </div>
+      <div class="height-transition height-transition-hidden">
+        <div class="filler"></div>
       </div>
     </article>
   {{ end }}

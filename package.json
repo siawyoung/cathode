@@ -9,9 +9,13 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.2.2",
+    "canvas": "^1.3.5",
     "cssnext": "^1.8.4",
+    "gray-matter": "^2.0.2",
     "lost": "^6.6.2",
+    "node-find-files": "0.0.4",
     "postcss-cli": "^2.3.2",
-    "postcss-responsive-type": "^0.3.2"
+    "postcss-responsive-type": "^0.3.2",
+    "toml": "^2.3.0"
   }
 }

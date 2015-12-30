@@ -22,7 +22,7 @@
 <main class="posts">
   {{ range .Data.Pages }}
     <article class="post">
-      <img class="album-thumbnail" src="/images/{{ .Params.cover }}.jpg">
+      <img class="album-thumbnail"  src="/images/placeholder.png" data-src="/images/{{ .Params.cover }}.jpg">
       <div class="thumbnail-description">
         <div class="thumbnail-title">{{ .Title }}</div>
         <div class="thumbnail-artist">{{ .Params.artist }}</div>

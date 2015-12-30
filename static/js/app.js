@@ -104,6 +104,8 @@ $(document).ready(function() {
 
   })
 
+  $('img').unveil(200)
+
 })
 
 function wrapParagraphTags() {

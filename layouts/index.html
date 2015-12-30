@@ -29,9 +29,7 @@
       </div>
       {{ if .Site.Data.colors }}
         {{ $colorinfo := index .Site.Data.colors .Title }}
-        <div class="height-transition height-transition-hidden">
           <div class="expansion" data-background-color="{{ $colorinfo.background }}" data-secondary-colors="{{ $colorinfo.content }}">
-        </div>
       {{ else }}
         <div class="expansion">
       {{ end }}
@@ -39,9 +37,7 @@
         <h3>{{ .Params.artist }}</h3>
         {{ .Content }}
       </div>
-      <div class="height-transition height-transition-hidden">
         <div class="filler"></div>
-      </div>
     </article>
   {{ end }}
 </main>

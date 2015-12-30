@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/dist/style.css">
   <script src="/js/jquery.js"></script>
-  <script src="/js/jquery.unveil.js"></script>
-  <script src="/js/colibri.min.js"></script>
+  <script src="/js/lazyload.min.js"></script>
+  {{ if .Site.Params.browserProcessing }}
+    <script src="/js/colibri.min.js"></script>
+  {{ end }}
   <script src="/js/app.js"></script>
 </head>
 <body>

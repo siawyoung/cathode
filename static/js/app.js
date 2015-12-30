@@ -84,7 +84,7 @@ $(document).ready(function() {
         img.onload = function () {
           var color = Colibri.extractImageColors(img,'css')
           expansionDiv.data("background-color", color.background)
-          expansionDiv.data("secondary-colors", color.content)
+          expansionDiv.data("secondary-colors", JSON.stringify([color.content.join(" ")]).replace(/"/g, ""))
 
           var backgroundColor = color.background
           var secondaryColors = color.content

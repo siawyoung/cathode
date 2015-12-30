@@ -29,7 +29,7 @@ body, .expansion {
   transition: background-color 0.20s;
 }
 
-h1, h4, p, .thumbnail-title, .thumbnail-artist, .expansion li, .rating {
+h1, h2, h3, h4, p, .thumbnail-title, .thumbnail-artist, .expansion li, .favourite-tracks {
   -webkit-transition: color 0.45s;
   transition: color 0.45s;
 }
@@ -56,6 +56,11 @@ header {
   text-align: center;
 }
 
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.2em;
+  margin: 0.4em 0;
+}
 
 h1 {
   font-size: 4em;
@@ -265,13 +270,4 @@ iframe {
   .expansion {
     padding: 5% 3%;
   }
-}
-
-.height-transition {
-    -webkit-transition: max-height 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out;
-    overflow-y: hidden;
-}
-.height-transition-hidden {
-    max-height: 0;
 }

@@ -22,7 +22,7 @@ body, .expansion {
   transition: background-color 0.20s;
 }
 
-h1, h2, h3, h4, p, .thumbnail-title, .thumbnail-artist, .expansion li, .favourite-tracks {
+h1, h2, h3, h4, p, a, .thumbnail-title, .thumbnail-artist, .expansion li, .favourite-tracks {
   transition: color 0.45s;
 }
 
@@ -39,7 +39,6 @@ header {
   text-align: center;
 }
 
-
 h1, h2, h3, h4, h5, h6, p {
   line-height: 1.2em;
   margin: 0.4em 0;
@@ -53,10 +52,28 @@ p {
   line-height: 2em;
 }
 
+blockquote {
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+}
+
 .posts {
   lost-center: 1280px;
-  clear: fix;
+  lost-utility: clearfix;
   position: relative;
+}
+
+.category {
+  margin-bottom: 2%;
+}
+
+.category-name {
+  lost-center: 1280px;
+  margin-bottom: 3%;
+  font-size: 1.8em;
 }
 
 .post {
@@ -123,6 +140,7 @@ p {
 
 iframe {
   margin: 0 auto;
+  margin-top: 5%;
 }
 
 .side-item h4 {

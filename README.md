@@ -28,6 +28,8 @@ jumbotronAuthor = "@siawyoung"
 jumbotronAuthorLink = "http://siawyoung.com"
 ```
 
+The best way to learn how to use the theme is to check out my [site repo](https://github.com/siawyoung/top2015), but I'll write some instructions below too.
+
 ## Writing a Post
 
 Let's take a look at how a typical post looks like:
@@ -80,12 +82,15 @@ Cathode ships with three different types of shortcodes: `side_info`, `spotify`, 
 
 #### Spotify
 
+```
 {{< spotify "spotify_uri" >}}
-
+```
 
 #### Youtube
 
+```
 {{< youtube "youtube_video_id" >}}
+```
 
 ### Archetypes
 
@@ -99,9 +104,9 @@ $ hugo new albums/i-am-a-new-post.md
 
 ## Colour Generation
 
-To generate the colours, Cathode makes use of Colibri. Colibri can invoked by the browser, or it can be run with Node and the values precomputed and stored in a Hugo data file (located in `/data/colours.json`). The latter (precomputing) is recommended, as using Colibri on the browser incurs a noticeable performance hit.
+To generate the colours, Cathode makes use of [Colibri](https://github.com/arcanis/colibri.js/). Colibri can invoked by the browser, or it can be run with Node and the values precomputed and stored in a Hugo data file (located in `/data/colours.json`). The latter (precomputing) is recommended, as using Colibri on the browser incurs a noticeable performance hit.
 
-To precompute the values, `cd` into the Cathode folder and run `npm run processColours`. This will require you to have `cairo` installed on your system, which is not part of the `npm install` process.
+To precompute the values, `cd` into the Cathode folder and run `npm run processColours`. This will require you to have `Cairo` installed on your system, which is not part of the `npm install` process.
 
 This script will loop through all your posts and look at the `cover` field, and then look in the `static` folder for a file with the corresponding filename, and then run Colibri with that filename.
 

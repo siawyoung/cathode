@@ -73,6 +73,7 @@ p {
 
 .album-thumbnail {
   width: 100%;
+  cursor: pointer;
 }
 
 .thumbnail-description {

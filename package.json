@@ -1,12 +1,11 @@
 {
   "name": "cathode",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Hugo theme for displaying visual content in a grid-like fashion.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "processColors": "node ./lib/processColors.js"
+    "processColours": "node ./lib/processColours.js"
   },
-  "author": "",
+  "author": "Lau Siaw Young",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.2.2",

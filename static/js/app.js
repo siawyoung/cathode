@@ -1,5 +1,14 @@
 var transitionSpeed = 500
 
+function wrapParagraphTags() {
+  $('.expansion').each(function() {
+    var favTracksHeader = $(this).children('h4:contains("Favourite tracks"), h4:contains("Favorite tracks")')
+    favTracksHeader.css("margin-top", "30px")
+    favTracksHeader.next().addClass("favourite-tracks")
+    $(this).children().not('.side-info').wrapAll('<div class="expansion-content" />')
+  })
+}
+
 function parseSecondaryColors(str) {
   return str.substring(1, str.length - 1).split(" ")
 }
@@ -10,7 +19,7 @@ $(document).ready(function() {
   var minHeight  = 300
 
   // reuse as much jquery calls as possible
-  var elementsToChange = [$('h1'), $('p:not(".favourite-tracks"), h2'), $('.thumbnail-title, h3'), $('.thumbnail-artist, h4'), $('.expansion li'), $('.favourite-tracks')]
+  var elementsToChange = [$('h1'), $('p:not(".favourite-tracks"), h2'), $('.thumbnail-title, h3, a'), $('.thumbnail-artist, h4'), $('.expansion li'), $('.favourite-tracks')]
   var expansions = $('.expansion')
   var body       = $('body')
   var all        = $.merge([], expansions)
@@ -48,7 +57,6 @@ $(document).ready(function() {
 
     var expansionDiv = $(this).siblings('.expansion')
     var fillerDiv = $(this).siblings('.filler')
-    var e = $(this).siblings('.expansion, .filler')
     var image = $(this).attr('src')
 
     // closing an opened div
@@ -57,7 +65,6 @@ $(document).ready(function() {
       changeColours(expansionDiv, 'white')
       resetTypeColors()
 
-      // e.slideUp(transitionSpeed)
       expansionDiv.slideUp(transitionSpeed)
       fillerDiv.slideUp(transitionSpeed)
 
@@ -105,12 +112,3 @@ $(document).ready(function() {
   })
 
 })
-
-function wrapParagraphTags() {
-  $('.expansion').each(function() {
-    var favTracksHeader = $(this).children('h4:contains("Favourite tracks"), h4:contains("Favorite tracks")')
-    favTracksHeader.css("margin-top", "30px")
-    favTracksHeader.next().addClass("favourite-tracks")
-    $(this).children().not('.side-info').wrapAll('<div class="expansion-content" />')
-  })
-}

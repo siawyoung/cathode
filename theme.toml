@@ -3,19 +3,13 @@
 
 name = "Cathode"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+licenselink = "https://github.com/siawyoung/cathode/blob/master/LICENSE.md"
+description = "A Hugo theme for displaying visual content in a grid-like fashion."
+homepage = "https://github.com/siawyoung/cathode"
+tags = ["albums", "music", "grid"]
+features = ["responsive", "colourful"]
 min_version = 0.14
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Lau Siaw Young"
+  homepage = "http://siawyoung.com"

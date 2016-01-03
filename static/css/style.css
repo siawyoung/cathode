@@ -102,7 +102,7 @@ p {
 }
 
 .expansion {
-  clear: fix;
+  lost-utility: clearfix;
   display: none;
   width: 100%;
   position: absolute;

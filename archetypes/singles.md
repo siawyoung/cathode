@@ -1,0 +1,5 @@
++++
+artist = ""
+cover = ""
+types = "single"
++++

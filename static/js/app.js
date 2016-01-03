@@ -9,7 +9,7 @@ function wrapParagraphTags() {
   })
 }
 
-function parseSecondaryColors(str) {
+function parseSecondaryColours(str) {
   return str.substring(1, str.length - 1).split(" ")
 }
 
@@ -33,24 +33,24 @@ $(document).ready(function() {
     self.siblings(".filler").css("height", self.css("height"))
   })
 
-  function changeTypeColors(colors) {
+  function changeTypeColours(colours) {
     // cycle through list
-    var len = colors.length
+    var len = colours.length
     function index(n) { return (n % len) }
     for (var i = elementsToChange.length - 1; i >= 0; i--) {
-      elementsToChange[i].css('color', colors[index(i)])
+      elementsToChange[i].css('color', colours[index(i)])
     }
   }
 
-  function resetTypeColors() {
+  function resetTypeColours() {
     for (var i = elementsToChange.length - 1; i >= 0; i--) {
       elementsToChange[i].css('color', 'black')
     }
   }
 
-  function changeColours(expansion, color) {
-    expansion.css("background-color", color)
-    body.css("background-color", color)
+  function changeColours(expansion, colour) {
+    expansion.css("background-color", colour)
+    body.css("background-color", colour)
   }
 
   $('.album-thumbnail').click(function() {
@@ -63,7 +63,7 @@ $(document).ready(function() {
     if (expansionDiv.is(':visible')) {
 
       changeColours(expansionDiv, 'white')
-      resetTypeColors()
+      resetTypeColours()
 
       expansionDiv.slideUp(transitionSpeed)
       fillerDiv.slideUp(transitionSpeed)
@@ -71,13 +71,13 @@ $(document).ready(function() {
     // opening a div
     } else {
       // if the colours are already precomputed
-      if (expansionDiv.data("background-color")) {
+      if (expansionDiv.data("background-colour")) {
 
-        var backgroundColor = expansionDiv.data("background-color")
-        var secondaryColors = parseSecondaryColors(expansionDiv.data("secondary-colors"))
+        var backgroundColour = expansionDiv.data("background-colour")
+        var secondaryColours = parseSecondaryColours(expansionDiv.data("secondary-colours"))
 
-        changeColours(expansions, backgroundColor)
-        changeTypeColors(secondaryColors)
+        changeColours(expansions, backgroundColour)
+        changeTypeColours(secondaryColours)
 
         // slide everything up, then slide the clicked one down
         all.slideUp(transitionSpeed).promise().done(function() {
@@ -89,15 +89,15 @@ $(document).ready(function() {
       } else {
         var img = new Image()
         img.onload = function () {
-          var color = Colibri.extractImageColors(img,'css')
-          expansionDiv.data("background-color", color.background)
-          expansionDiv.data("secondary-colors", JSON.stringify([color.content.join(" ")]).replace(/"/g, ""))
+          var colour = Colibri.extractImageColours(img,'css')
+          expansionDiv.data("background-colour", colour.background)
+          expansionDiv.data("secondary-colours", JSON.stringify([colour.content.join(" ")]).replace(/"/g, ""))
 
-          var backgroundColor = color.background
-          var secondaryColors = color.content
+          var backgroundColour = colour.background
+          var secondaryColours = colour.content
 
-          changeColours(expansions, backgroundColor)
-          changeTypeColors(secondaryColors)
+          changeColours(expansions, backgroundColour)
+          changeTypeColours(secondaryColours)
 
           all.slideUp(transitionSpeed).promise().done(function() {
            expansionDiv.slideDown(transitionSpeed)

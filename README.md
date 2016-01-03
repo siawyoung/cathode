@@ -121,6 +121,15 @@ to your `config.toml`.
 
 ## Misc.
 
+### Meta Description
+
+The site's meta description can be added like so:
+
+```
+[params]
+description = "The best music of 2015, according to Siaw Young."
+```
+
 ### Favicon
 
 Your favicon should be placed in `/static/favicon` and named `logo.ico`.

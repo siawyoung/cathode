@@ -65,8 +65,8 @@ $(document).ready(function() {
       changeColours(expansionDiv, 'white')
       resetTypeColours()
 
-      expansionDiv.slideUp(transitionSpeed)
-      fillerDiv.slideUp(transitionSpeed)
+      expansionDiv.velocity("slideUp", transitionSpeed)
+      fillerDiv.velocity("slideUp", transitionSpeed)
 
     // opening a div
     } else {
@@ -80,9 +80,9 @@ $(document).ready(function() {
         changeTypeColours(secondaryColours)
 
         // slide everything up, then slide the clicked one down
-        all.slideUp(transitionSpeed).promise().done(function() {
-          expansionDiv.slideDown(transitionSpeed)
-          fillerDiv.slideDown(transitionSpeed)
+        all.velocity("slideUp", transitionSpeed).promise().done(function() {
+          expansionDiv.velocity("slideDown", transitionSpeed)
+          fillerDiv.velocity("slideDown", transitionSpeed)
         })
 
       // if colours are not precomputed, compute them on the fly and cache in data attributes
@@ -99,9 +99,9 @@ $(document).ready(function() {
           changeColours(expansions, backgroundColour)
           changeTypeColours(secondaryColours)
 
-          all.slideUp(transitionSpeed).promise().done(function() {
-           expansionDiv.slideDown(transitionSpeed)
-           fillerDiv.slideDown(transitionSpeed)
+          all.velocity("slideUp", transitionSpeed).promise().done(function() {
+            expansionDiv.velocity("slideDown", transitionSpeed)
+            fillerDiv.velocity("slideDown", transitionSpeed)
           })
         }
         img.src = image

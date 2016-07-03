@@ -1,5 +1,5 @@
 html {
-  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", "Tahoma", sans-serif;
   font-size: calc(15px + 6 * ((100vw - 420px) / 860));
   box-sizing: border-box;
 }

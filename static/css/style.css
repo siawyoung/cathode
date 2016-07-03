@@ -6,7 +6,7 @@
 @custom-media --expansion-padding-breakpoint (max-width: 1280px);
 
 html {
-  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "Verdana", sans-serif;
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", "Tahoma", sans-serif;
   font-size: responsive;
   min-font-size: 15px;
   box-sizing: border-box;
